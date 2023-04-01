@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}
+    SuperTIME!-HOME
+{% endblock %}
+{% block tools%}
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('home_page')}}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('market_page')}}">Market</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+        </li>
+    </ul>
+{% endblock %}
+{% block content %}
+    <h1 class="border text-center p-4">WELCOME TO HOME PAGE!</h1>
+    <img src="https://getsupertime.com/images/logo-dark.png" class="img-fluid-center" alt="Responsive image">
+    <div class="card" style="width:18rem;">
+        <img src="https://www.pngfind.com/pngs/m/200-2007124_rolex-iconic-watches-hd-png-download.png" class="card-img-top m-3 p-3" alt="card1">
+        <div class="card-body p-4">
+          <h5 class="card-title bg-dark">Rolex Classic</h5>
+          <p class="card-text bg-dark">Made by in-house oystralsteel, Overose Gold 18k and with braclet-locking machanism!</p>
+          <a href="#" class="btn btn-primary">Purchase</a>
+        </div>
+    </div>
+    <div class="card" style="width:18rem;">
+        <img src="https://vectorified.com/image/rolex-watch-vector-22.jpg" class="card-img-top m-3 p-3" alt="card1">
+        <div class="card-body p-4">
+          <h5 class="card-title bg-dark">Rolex Classic</h5>
+          <p class="card-text bg-dark">Made by in-house oystralsteel, Overose Gold 18k and with braclet-locking machanism!</p>
+          <a href="#" class="btn btn-primary">Purchase</a>
+        </div>
+    </div>
+
+{% endblock%}

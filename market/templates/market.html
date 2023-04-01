@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}
+  SuperTIME!-MARKET
+{% endblock %}
+{% block tools %}
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('home_page')}}">Home <span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('market_page')}}">Market</a>
+  </li>
+</ul>
+<ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Register</a>
+    </li>
+</ul>
+{% endblock %}
+{% block content %}
+<h1 class="border text-center p-4">!SuperTIME Market Products!</h1>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Type</th>
+        <th scope="col">Barcode</th>
+        <th scope="col">price</th>
+        <th scope="col">Optons</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in items %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.Type }}</td>
+            <td>{{ item.barcode }}</td>
+            <td>Rs.{{ item.price}}</td>
+            <td>
+              <button class="btn btn-info">More info</button>
+              <button class="btn btn-success">PURCHASE</button>
+            </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
